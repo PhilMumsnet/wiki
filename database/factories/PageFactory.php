@@ -22,7 +22,8 @@ class PageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(),
+            'contents' => implode('', $this->faker->paragraphs(mt_rand(2, 10))),
         ];
     }
 }
