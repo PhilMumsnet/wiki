@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Page;
 use App\Http\Livewire\Pages;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pages', Pages::class);
+Route::get('/pages', Pages::class)->name('pages');
+Route::get('/pages/{page}', Page::class)->name('page');
