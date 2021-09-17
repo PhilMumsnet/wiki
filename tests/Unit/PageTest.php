@@ -11,7 +11,7 @@ class PageTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function the_admin_table_has_the_expected_columns()
+    public function the_pages_table_has_the_expected_columns()
     {
         $this->assertTrue(
             Schema::hasColumns('pages', [
