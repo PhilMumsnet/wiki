@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Admin;
+namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Support\Facades\Schema;
