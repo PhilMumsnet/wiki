@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Page;
 use App\Http\Livewire\Pages;
+use App\Http\Livewire\CreatePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('pages')->name('pages.')->group(function () {
-    Route::get('/', Pages::class)->name('show');
-    Route::get('/{page}', Page::class)->name('page.show');
-});
+Route::get('pages', Pages::class)->name('pages');
+Route::get('pages/create', CreatePage::class);
+Route::get('pages/{page}', Page::class)->name('page');
