@@ -17,7 +17,7 @@ class DisplayPageTest extends TestCase
     {
         $page = PageModel::factory()->create();
 
-        $response = $this->get(route('page', ['page' => $page]));
+        $response = $this->get(route('pages.page.show', ['page' => $page]));
 
         $response->assertSuccessful($response);
         $response->assertSeeLivewire(Page::class);

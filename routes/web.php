@@ -19,5 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pages', Pages::class)->name('pages');
-Route::get('/pages/{page}', Page::class)->name('page');
+Route::prefix('pages')->name('pages.')->group(function () {
+    Route::get('/', Pages::class)->name('show');
+    Route::get('/{page}', Page::class)->name('page.show');
+});
